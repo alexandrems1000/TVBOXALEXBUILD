@@ -83,7 +83,7 @@ def INDEX():
     
 
 def BUILDMENU():
-    link = OPEN_URL('https://cld.pt/dl/download/b940a4cd-e90a-41cf-afa2-750b47680963/wizard-tvboxalexBuild.txt?download=true').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://cld.pt/dl/download/c12677e0-dfef-4a16-ba92-af49190ba373/wizard.txt?download=true').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,90,iconimage,fanart,description)
@@ -160,7 +160,7 @@ def TextBoxes(heading,announce):
   TextBox()
 
 def facebook():
-    TextBoxes('[COLOR red][B] TVBOXALEX BUILD[/B][/COLOR]Wizard', 'Join the discussions at [COLOR blue]Facebook.com/groups/1510530329266928[/COLOR]')
+    TextBoxes('[COLOR red][B] TVBOXALEX BUILD[/B][/COLOR]Wizard', 'Join the discussions.[COLOR blue][/COLOR]')
     
         
     
@@ -1294,7 +1294,7 @@ def DELETEIVUEDB():
 def WIZARD(name,url,description):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     dp = xbmcgui.DialogProgress()
-    dp.create("[COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR] [COLOR white]Wizard","Downloading ",'', 'Please Wait')
+    dp.create("[COLOR blue][B]TVBOXALEXBUILD[/B][/COLOR]Wizard","Downloading ",'', 'Please Wait')
     lib=os.path.join(path, name+'.zip')
     try:
        os.remove(lib)
@@ -1309,7 +1309,7 @@ def WIZARD(name,url,description):
     print '======================================='
     extract.all(lib,addonfolder,dp)
     dialog = xbmcgui.Dialog()
-    dialog.ok("[COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR] [COLOR white]Wizard", "To save changes you now need to force close Kodi, Press OK to force close Kodi")
+    dialog.ok("[COLOR blue][B]TVBOXALEXBUILD[/B][/COLOR]Wizard", "To save changes you now need to force close Kodi, Press OK to force close Kodi")
     killxbmc()
 
 #################################
