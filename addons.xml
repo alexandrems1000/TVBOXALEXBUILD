@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.program.buildalex" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]BUILD WIZARD[/COLOR]" version="0.0.1" provider-name="[COLOR blue][B]ALEX[/B][/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common"/>
+	<import addon="plugin.program.tvboxalexboxnotifications" version="0.0.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] Wizard</summary>
+    <description lang="en">[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] Wizard provides easy access to Builds, Maintenance Tools.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.program.tvboxalexboxnotifications" version="0.0.1"
+       name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]NOTIFICATIONS[/COLOR]" provider-name="TVBOXALEX">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  	<import addon="script.module.addon.common" optional="true" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary>TVBOXALEX</summary>
+  	<description>Recebe as mais recentes novidades da TVBOXALEX mal abres o Kodi. Cancelar subscrição nas definições do Addon.</description>
+  	<disclaimer>Nós não assumimos qualquer responsabilidade por eventuais problemas este plugin possa causar.</disclaimer>
+  	<language>en</language>
+  	<platform>all</platform>
+  	<website>http://</website>
+  	<source>http://</source>
+  	<email>tvboxalex@hotmail.com</email>
+  </extension>
+</addon>
+
+<addon id="repository.tvboxalexbuild" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]REPOSITORY BUILD[/COLOR]" version="0.0.1" provider-name="[COLOR blue][B]AMO[/B][/COLOR][COLOR green]box[/COLOR]">
+	<extension point="xbmc.addon.repository" name="Demonstration Add-on Repository">
+		<info compressed="false">http://raw.github.com/alexandrems1000/TVBOXALEXBUILD/master/addons.xml</info>
+		<checksum>http://raw.github.com/alexandrems1000/TVBOXALEXBUILD/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/alexandrems1000/TVBOXALEXBUILD/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>TVBOXALEXBUILD</summary>
+		<description>TVBOXALEXBUILD Installer</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+</addons>
