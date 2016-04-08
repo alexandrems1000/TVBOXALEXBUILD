@@ -83,7 +83,7 @@ def INDEX():
     
 
 def BUILDMENU():
-    link = OPEN_URL('https://cld.pt/dl/download/c12677e0-dfef-4a16-ba92-af49190ba373/wizard.txt?download=true').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://cld.pt/dl/download/4e158f1c-3e01-490c-a769-f6e7c30a97a3/wizard.txt?download=true').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,90,iconimage,fanart,description)
