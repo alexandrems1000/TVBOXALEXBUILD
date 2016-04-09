@@ -27,7 +27,7 @@ U = ADDON.getSetting('User')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "4.0.0"
+VERSION = "0.0.2"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "TVBOXALEXBUILD"            
@@ -83,7 +83,7 @@ def INDEX():
     
 
 def BUILDMENU():
-    link = OPEN_URL('https://cld.pt/dl/download/4e158f1c-3e01-490c-a769-f6e7c30a97a3/wizard.txt?download=true').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://cld.pt/dl/download/c4512338-493a-4b48-9e88-032e857564c7/wizard.txt?download=true').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,90,iconimage,fanart,description)

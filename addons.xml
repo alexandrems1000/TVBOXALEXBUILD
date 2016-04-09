@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.buildalex" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]BUILD WIZARD[/COLOR]" version="0.0.1" provider-name="[COLOR blue][B]ALEX[/B][/COLOR]">
+<addon id="plugin.program.buildalex" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]BUILD WIZARD[/COLOR]" version="0.0.2" provider-name="[COLOR blue][B]ALEX[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.addon.common" />
@@ -16,7 +16,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.program.tvboxalexboxnotifications" version="0.0.1"
+<addon id="plugin.program.tvboxalexboxnotifications" version="0.0.2"
        name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]NOTIFICATIONS[/COLOR]" provider-name="TVBOXALEX">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
