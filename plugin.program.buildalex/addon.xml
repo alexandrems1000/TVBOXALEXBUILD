@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.buildalex" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]BUILD WIZARD[/COLOR]" version="0.0.2" provider-name="[COLOR blue][B]ALEX[/B][/COLOR]">
+<addon id="plugin.program.buildalex" name="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]BUILD WIZARD[/COLOR]" version="0.0.3" provider-name="[COLOR blue][B]ALEX[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.addon.common" />
