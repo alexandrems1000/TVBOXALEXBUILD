@@ -18,7 +18,7 @@ USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/
 addon_id = 'plugin.program.buildalex'
 ADDON = xbmcaddon.Addon(id=addon_id)
 AddonID='plugin.program.buildalex'
-AddonTitle="[COLOR blue][B]TVBOXALEXBUILD[/B][/COLOR]Wizard"
+AddonTitle="[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white] BUILD WIZARD[/COLOR]"
 dialog       =  xbmcgui.Dialog()
 net = Net()
 HOME         =  xbmc.translatePath('special://home/')
@@ -27,7 +27,7 @@ U = ADDON.getSetting('User')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "0.0.4"
+VERSION = "0.0.6"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "TVBOXALEXBUILD"            
@@ -76,9 +76,9 @@ mastercopy   =  ADDON.getSetting('mastercopy')
 
 #Root menu of addon
 def INDEX():
-	addDir('[COLOR blue][B] TVBOXALEX BUILD[/B][/COLOR][COLOR white] Builds[/COLOR]',BASEURL,20,ART+'amoboxwiz.png',FANART,'')
+	addDir('[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][COLOR white]BUILDS[/COLOR]',BASEURL,20,ART+'amoboxwiz.png',FANART,'')
 	#addDir('[COLOR lime][B]APK[/B] STORE[/COLOR]',BASEURL,40,ART+'apkstore.png',FANART,'')
-	addDir('[COLOR yellow]MAINTENANCE[/COLOR]',BASEURL,30,ART+'maintenance.png',FANART,'')
+	addDir('[COLOR blue]MAINTENANCE[/COLOR]',BASEURL,30,ART+'maintenance.png',FANART,'')
 	
     
 
@@ -453,7 +453,7 @@ def RESTORE_COMMUNITY(name,url,video,description,skins,guisettingslink):
     default_contents = readfile.read()
     readfile.close()
     READ_ZIP(lib)
-    dp.create("[COLOR=blue][B]AMO[/B][/COLOR][COLOR=green][B]box[/B][/COLOR] Custom Builds","Checking ",'', 'Please Wait')
+    dp.create("[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] Custom Builds","Checking ",'', 'Please Wait')
     dp.update(0,"", "Extracting Zip Please Wait")
     extract.all(lib,HOME,dp)
     time.sleep(1)
@@ -1285,7 +1285,7 @@ def DELETEIVUEDB():
 				
 
     dialog = xbmcgui.Dialog()
-    dialog.ok("[COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR] Maintenance", "Database Files Removed, Please reload TV Guide", "[COLOR yellow]Brought To You By [COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR][/COLOR]")
+    dialog.ok("[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] Maintenance", "Database Files Removed, Please reload TV Guide", "[COLOR yellow]Brought To You By [COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][/COLOR]")
 
 #################################
 ####BUILD INSTALL################
@@ -1319,7 +1319,7 @@ def WIZARD(name,url,description):
 def ADDONWIZARD(name,url,description):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     dp = xbmcgui.DialogProgress()
-    dp.create("[COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR] [COLOR white]Wizard","Downloading ",'', 'Please Wait')
+    dp.create("[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] [COLOR white]Wizard","Downloading ",'', 'Please Wait')
     lib=os.path.join(path, name+'.zip')
     try:
        os.remove(lib)
@@ -1334,7 +1334,7 @@ def ADDONWIZARD(name,url,description):
     print '======================================='
     extract.all(lib,addonfolder,dp)
     dialog = xbmcgui.Dialog()
-    dialog.ok("[COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR] [COLOR white]Wizard", "Please restart kodi for changes To Take Effect","[COLOR yellow]Brought To You By [COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR][/COLOR]")
+    dialog.ok("[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] [COLOR white]Wizard", "Please restart kodi for changes To Take Effect","[COLOR yellow]Brought To You By [COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][/COLOR]")
 
 ################################
 ###DELETE PACKAGES##############
@@ -1359,10 +1359,10 @@ def DeletePackages(url):
                     for d in dirs:
                         shutil.rmtree(os.path.join(root, d))
                     dialog = xbmcgui.Dialog()
-                    dialog.ok("[COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR] [COLOR white]Wizard", "Packages Successfuly Removed", "[COLOR yellow]Brought To You By [COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR][/COLOR]")
+                    dialog.ok("[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] [COLOR white]Wizard", "Packages Successfuly Removed", "[COLOR yellow]Brought To You By [COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][/COLOR]")
     except: 
         dialog = xbmcgui.Dialog()
-        dialog.ok("[COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR] [COLOR white]Wizard", "Sorry we were not able to remove Package Files", "[COLOR yellow]Brought To You By [COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR][/COLOR]")
+        dialog.ok("[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] [COLOR white]Wizard", "Sorry we were not able to remove Package Files", "[COLOR yellow]Brought To You By [COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][/COLOR]")
     
 
 
@@ -1566,7 +1566,7 @@ def deletecachefiles(url):
 				
 
     dialog = xbmcgui.Dialog()
-    dialog.ok("[COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR] [COLOR white]Wizard", " All Cache Files Removed", "[COLOR yellow]Brought To You By [COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR][/COLOR]")
+    dialog.ok("[COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR] [COLOR white]Wizard", " All Cache Files Removed", "[COLOR yellow]Brought To You By [COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][/COLOR]")
  
         
 def OPEN_URL(url):
@@ -1723,7 +1723,7 @@ def UPDATEREPO():
     xbmc.executebuiltin( 'UpdateLocalAddons' )
     xbmc.executebuiltin( 'UpdateAddonRepos' )
     dialog = xbmcgui.Dialog()
-    dialog.ok("[COLOR blue][B]AMO[/B][/COLOR][COLOR green]box[/COLOR][COLOR gold] Wizard", '','                                 REFRESH SUCCESSFUL :)', "                          [COLOR yellow]Brought To You By [COLOR blue][B]AMO[/B][/COLOR][COLOR green][B]box[/B][/COLOR][/COLOR]")
+    dialog.ok("[COLOR blue][B]AMO[/B][/COLOR][COLOR green]box[/COLOR][COLOR gold] Wizard", '','                                 REFRESH SUCCESSFUL :)', "                          [COLOR yellow]Brought To You By [COLOR blue]TV[/COLOR][COLOR yellow]BOX[/COLOR][COLOR red]ALEX[/COLOR][/COLOR]")
     return
     
 #def FIXREPOSADDONS(url):
